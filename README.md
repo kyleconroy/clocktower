@@ -1,6 +1,6 @@
 ![Hill Valley Clock Tower](https://github.com/derferman/clocktower/raw/master/tower.jpg)
 
-Clock Tower allows you to to back in time. Using the [Wayback Machine](http://www.archive.org/web/web.php), Clock Tower downloads every historical snapshot of your site.
+Clock Tower allows you to go back in time. Using the [Wayback Machine](http://www.archive.org/web/web.php), Clock Tower downloads every historical snapshot of a given URL.
 
 ## Installation
 
@@ -11,8 +11,6 @@ Or, if you must
     easy_install clocktower
 
 ## Usage
-
-Clock Tower is really easy to use
 
     clocktower news.ycombinator.com
 
