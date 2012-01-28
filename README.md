@@ -20,12 +20,8 @@ clocktower is really easy to use
 
     clocktower news.ycombinator.com
 
-will download all snapshots in `~/clocktower/news.ycombinator.com`
+will download all snapshots into `~/clocktower/news.ycombinator.com`. Each file will be named `<unix timestamp>.html`
 
 You can specify the download directory with the `-d` flag 
 
     clocktower -d /tmp/clocktower news.ycombinator.com
-
-clocktower expects that directory to exist
-
-
