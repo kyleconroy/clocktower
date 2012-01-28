@@ -1,18 +1,18 @@
 ![Hill Valley Clock Tower](https://github.com/derferman/clocktower/raw/master/tower.jpg)
 
-The [Wayback Machine](http://www.archive.org/web/web.php) contains a unique history for many websites. However, downloading and accessing these archives is tedious. With clocktower, no more!
+Clock Tower allows you to to back in time. Using the [Wayback Machine](http://www.archive.org/web/web.php), Clock Tower downloads every historical snapshot of your site.
 
 ## Installation
 
     pip install clocktower
 
-but if you must
+Or, if you must
 
     easy_install clocktower
 
 ## Usage
 
-clocktower is really easy to use
+Clock Tower is really easy to use
 
     clocktower news.ycombinator.com
 
