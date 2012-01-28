@@ -29,13 +29,19 @@ def parse_datetime(url):
     return datetime.datetime(year, month, day, hour, minutes, seconds)
 
 
+def save_snapshots(urls):
+
+
 def get_snapshots(year, url):
     """Return a list of all snapshots for this year"""
     wayback_url = "http://wayback.archive.org/web/{}0101000000*/http://{}"
-    try:
-        return parse_snapshots(urllib.urlopen(wayback_url.format(year, url)))
-    except:
-        return False 
+    y, snapshots = parse_snapshots(urllib.urlopen(wayback_url.format(year, url)))
+
+    # We got the wrong year
+    if year == y:
+        return []
+
+
 
 
 if __name__ == "__main__":
