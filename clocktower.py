@@ -2,7 +2,6 @@ import time
 import datetime
 import itertools
 import argparse
-import logging
 import urllib
 import os
 from lxml import html
@@ -47,18 +46,19 @@ def save_snapshot(url, directory):
 
 def get_snapshots(year, url):
     """Return a list of all snapshots for this year"""
-    wayback_url = "http://wayback.archive.org/web/{}0701000000*/http://{}"
-    y, snapshots = parse_snapshots(urllib.urlopen(wayback_url.format(year, url)))
+    wayback = "http://wayback.archive.org/web/{}0701000000*/http://{}"
+    y, snapshots = parse_snapshots(urllib.urlopen(wayback.format(year, url)))
 
     # We got the wrong year
     if not year == y:
         return []
-    
+
     return snapshots
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Download websites from archive.org")
+def main():
+    desc = "Download websites from archive.org"
+    parser = argparse.ArgumentParser(description=desc)
     parser.add_argument("url", help="URL to download")
     parser.add_argument("-d", "--directory", help="Download directory",
                         default="~/clocktower")
@@ -69,7 +69,6 @@ if __name__ == "__main__":
     if not os.path.isdir(website_dir):
         os.makedirs(website_dir)
 
-
     snapshots = set()
 
     for year in range(1998, 2013):
@@ -77,19 +76,15 @@ if __name__ == "__main__":
         start = len(snapshots)
         for url in urls:
             snapshots.add(url)
-        print "Got {} snapshot urls for {}, {}".format(len(snapshots) - start, 
+        print "Got {} snapshot urls for {}, {}".format(len(snapshots) - start,
                                                        args.url, year)
         time.sleep(1)
 
     # Merge into one huge set
-    for snapshot_url in snapshots: 
+    for snapshot_url in snapshots:
         path, created = save_snapshot(snapshot_url, website_dir)
         if created:
             print "Saved {} to {}".format(snapshot_url, path)
             time.sleep(1)
         else:
             print "Already downloaded {} to {}".format(snapshot_url, path)
-
-
-
-
