@@ -80,7 +80,6 @@ def main():
                                                        args.url, year)
         time.sleep(1)
 
-    # Merge into one huge set
     for snapshot_url in snapshots:
         path, created = save_snapshot(snapshot_url, website_dir)
         if created:
