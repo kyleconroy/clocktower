@@ -1,8 +1,4 @@
-# Clock Tower
-
-    Doc: Marty, you've got to come back with me
-    Marty: Where?
-    Doc: Back to the future
+![Hill Valley Clock Tower](https://github.com/derferman/clocktower/raw/master/tower.jpg)
 
 The [Wayback Machine](http://www.archive.org/web/web.php) contains a unique history for many websites. However, downloading and accessing these archives is tedious. With clocktower, no more!
 
