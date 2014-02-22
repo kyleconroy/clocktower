@@ -1,4 +1,4 @@
-![Hill Valley Clock Tower](https://github.com/derferman/clocktower/raw/master/tower.jpg)
+![Hill Valley Clock Tower](https://github.com/kyleconroy/clocktower/raw/master/tower.jpg)
 
 Clock Tower allows you to go back in time. Using the [Wayback Machine](http://www.archive.org/web/web.php), Clock Tower downloads all historical snapshots of a URL.
 
